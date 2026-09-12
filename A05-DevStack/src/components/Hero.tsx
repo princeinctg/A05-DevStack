@@ -1,6 +1,6 @@
 import bannerStack from "../assets/banner-stack.png";
-export default function Hero() {
 
+export default function Hero() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-20">
       <div className="flex flex-col items-center justify-between gap-10 md:flex-row">
@@ -11,8 +11,9 @@ export default function Hero() {
           <h1 className="text-4xl font-extrabold leading-tight text-slate-900 md:text-6xl">
             Build Your Ideal
             <br />
-           
-            <span className="bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent">
+
+            {/* Gradient Highlight */}
+            <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-transparent">
               Development Stack
             </span>
           </h1>
@@ -26,7 +27,8 @@ export default function Hero() {
           {/* Buttons */}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
 
-            <button className="btn border-0 rounded-lg bg-gradient-to-r from-[#F97316] to-[#EC4899] text-white">
+            {/* Primary Button */}
+            <button className="btn rounded-lg border-0 bg-gradient-to-r from-orange-500 via-pink-500 to-violet-500 text-white">
               Explore Technologies
             </button>
 
@@ -42,7 +44,6 @@ export default function Hero() {
           <img
             src={bannerStack}
             alt="Development stack"
-            
           />
         </div>
 
