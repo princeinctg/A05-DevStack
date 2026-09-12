@@ -7,12 +7,15 @@ export default function Navbar() {
 
         {/* Logo */}
         <div className="flex items-center gap-2">
-         <img src={Logo}  />
+          <img src={Logo} alt="Logo" />
         </div>
 
         {/* Menu */}
         <div className="hidden items-center gap-8 md:flex">
-          <a className="text-sm font-medium text-[#D91B7E]">Home</a>
+          <a className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-sm font-medium text-transparent">
+            Home
+          </a>
+
           <a className="text-sm text-gray-600">Technologies</a>
           <a className="text-sm text-gray-600">Projects</a>
           <a className="text-sm text-gray-600">About</a>
@@ -25,7 +28,8 @@ export default function Navbar() {
             Sign In
           </button>
 
-          <button className="rounded-full bg-[#D91B7E] px-4 py-2 text-sm font-medium text-white">
+          {/* Primary Button */}
+          <button className="rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-500 px-4 py-2 text-sm font-medium text-white">
             Sign Up
           </button>
         </div>
