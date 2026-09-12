@@ -8,33 +8,44 @@ import YourStack from "./components/YourStack";
 
 import technologies from "./data/technologies.json";
 import type { Technology } from "./type";
-
+import Footer from "./components/Footer";
 function App() {
   const [stack, setStack] = useState<Technology[]>([]);
 
- const handleAddToStack = (technology: Technology) => {
-  const alreadyAdded = stack.some(
-    (item) => item.id === technology.id
-  );
+  // Add technology 
+  const handleAddToStack = (technology: Technology) => {
+    const alreadyAdded = stack.some(
+      (item) => item.id === technology.id
+    );
 
-  if (alreadyAdded) {
-    toast.warning(`${technology.name} is already in your stack!`);
-    return;
-  }
+    if (alreadyAdded) {
+      toast.warning(`${technology.name} is already in your stack!`);
+      return;
+    }
 
-  setStack([...stack, technology]);
+    setStack([...stack, technology]);
 
-  toast.success(`${technology.name} added to your stack!`);
-};
+    toast.success(`${technology.name} added to your stack!`);
+  };
 
   // Remove one technology
   const handleRemove = (id: string) => {
+    const removedTechnology = stack.find(
+      (item) => item.id === id
+    );
+
     setStack(stack.filter((item) => item.id !== id));
+
+    toast.info(
+      `${removedTechnology?.name} removed from your stack!`
+    );
   };
 
   // Remove all technologies
   const handleRemoveAll = () => {
     setStack([]);
+
+    toast.error("All technologies removed from your stack!");
   };
 
   return (
@@ -78,8 +89,10 @@ function App() {
         </div>
 
       </main>
-       <ToastContainer></ToastContainer>
-       
+
+      {/*  Toastify */}
+      <ToastContainer ></ToastContainer>
+      <Footer></Footer>
     </>
   );
 }
