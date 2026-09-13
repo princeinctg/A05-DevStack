@@ -14,7 +14,7 @@ export default function Navbar() {
           {/* Left Side Hamburger */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="z-10 text-3xl leading-none text-[#7B7171] md:hidden"
+            className="z-10 block text-3xl leading-none text-[#7B7171] md:hidden"
             aria-label="Toggle menu"
           >
             ☰
@@ -52,13 +52,13 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Right Side: Buttons */}
+          {/* Right Side Buttons */}
           <div className="ml-auto flex items-center gap-2 md:ml-0">
             <button className="text-xs text-[#475569] sm:text-sm">
               Sign In
             </button>
 
-            <button className="font-semibold rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-500 px-3 py-2 text-xs text-white sm:px-4 sm:text-sm">
+            <button className="rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-500 px-3 py-2 text-xs font-semibold text-white sm:px-4 sm:text-sm">
               Sign Up
             </button>
           </div>
@@ -76,6 +76,7 @@ export default function Navbar() {
             </div>
           </div>
         )}
+
       </div>
     </nav>
   );
