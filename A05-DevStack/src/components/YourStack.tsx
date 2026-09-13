@@ -22,8 +22,11 @@ export default function YourStack({
           </h2>
 
           <p className="mt-1 text-sm text-slate-500">
-            {stack.length}{" "}
-            {stack.length === 1 ? "technology" : "No technologies selected yet."}
+            {stack.length === 0
+              ? "No technologies selected yet."
+              : `${stack.length} ${
+                  stack.length === 1 ? "technology" : "technologies"
+                } selected`}
           </p>
         </div>
 
@@ -37,7 +40,7 @@ export default function YourStack({
         )}
       </div>
 
-      {/* Empty  */}
+      {/* Empty Stack */}
       {stack.length === 0 ? (
         <div className="mt-4 rounded-xl border-2 border-dotted border-[#E2E8F0] py-10 text-center">
           <p className="text-sm text-[#94A3B8]">
@@ -88,7 +91,6 @@ export default function YourStack({
 
         </div>
       )}
-
     </aside>
   );
 }
