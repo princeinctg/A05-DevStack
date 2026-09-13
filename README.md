@@ -59,7 +59,7 @@ The child can send data back by calling a function passed through props.
 
 ### GitHub Repository
 
-Add your GitHub repository link here.](https://github.com/princeinctg/A05-DevStack.git
+https://github.com/princeinctg/A05-DevStack.git
 
 ### Live Site
 
