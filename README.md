@@ -63,4 +63,4 @@ https://github.com/princeinctg/A05-DevStack.git
 
 ### Live Site
 
-https://statuesque-tapioca-969549.netlify.app/
+king-stack-developer.netlify.app
