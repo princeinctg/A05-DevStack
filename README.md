@@ -63,4 +63,4 @@ https://github.com/princeinctg/A05-DevStack.git
 
 ### Live Site
 
-king-stack-developer.netlify.app
+https://king-stack-developer.netlify.app/
